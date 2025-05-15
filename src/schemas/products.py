@@ -3,7 +3,7 @@ from pydantic import BaseModel, Field
 
 
 class Product(BaseModel):
-    id: int
+    # id: int
     name: str
     price: float
     description: Optional[str] = Field(default=None,description="Nombre completo del usuario")

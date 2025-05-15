@@ -18,9 +18,11 @@ pip install -r requirements.txt
 Inicializar la API
 ```
 uvicorn src.main:app --reload
+uvicorn src.main:app --reload --port 8000
 ```
 
-
+Parar 
+control+c
 
 
 

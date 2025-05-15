@@ -6,6 +6,9 @@ def get_products(db: Session, skip: int = 0, limit: int = 10):
     return db.query(models.Product).offset(skip).limit(limit).all()
 
 
+def get_product_by_id(id: int, db: Session, skip: int = 0, limit: int = 10):
+    return db.query(models.Product).filter(models.Product.id == id).first()
+
 def create_product(db: Session, user: schemas.products):
     db_product = models.Product(**user.dict())
     db.add(db_product)
